@@ -44,32 +44,37 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 ```
  Developed by:SAHANA S
  RegisterNumber:25015837
+```
+```
+module JKFLIP(j,k,clk,q,qbar);
 
-module jkff(j,k,clk,q,qbar);
 input j,k,clk;
+
 output reg q,qbar;
+
 initial
 begin
-q=1'b0;
-q=1'b1;
-RTL LOGIC FOR FLIPFLOPS
-TIMING DIGRAMS FOR FLIP FLOPS
+    q = 1'b0;
+    qbar = 1'b1;
 end
+
 always @(posedge clk)
 begin
-q<=(j&~q)|(~k&q);
-qbar<=~q;
+    q <= (j & ~q) | (~k & q);
+    qbar <= ~q;
 end
+
 endmodule
+
 ```
 **RTL LOGIC FOR FLIPFLOPS**
 
-<img width="1122" height="515" alt="image" src="https://github.com/user-attachments/assets/0123a818-fe4b-4ae4-9712-81889e93608c" />
-
+<img width="947" height="452" alt="image" src="https://github.com/user-attachments/assets/f1a89bcf-12f0-45a6-ab4b-cc31f9f48b20" />
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-<img width="1247" height="340" alt="image" src="https://github.com/user-attachments/assets/a2aa226a-bca5-4f5e-9003-69a912c7799b" />
+<img width="1037" height="526" alt="image" src="https://github.com/user-attachments/assets/39abe647-2457-4d5a-9997-e4d2657ecec1" />
+
 
 **RESULTS**
 Sucessfully implemented JK flipflop using verilog and validating their functionality using their functional tables.
